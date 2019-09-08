@@ -2,70 +2,8 @@
 
 import sys
 import getopt
-import json
-import requests
-from babel import Locale
-from babel.numbers import *
+from convert_functions import *
 
-
-def getResponse(api_address):
-    api_address=str(api_address)
-    try:
-        requestStatus = requests.get(api_address)
-        return requestStatus
-    except:
-        return 'Connection error'
-
-
-
-def inputvalidation(input_currency,rates_source):
-	input_currency=str(input_currency)
-	found = 0
-	if (len(input_currency) == 1):
-		for curr_code in rates_source:
-			#cur_symbol=Locale('en', 'US').currency_symbols[curr_code]
-			cur_symbol=get_currency_symbol(curr_code,locale='en_US.utf8')
-			if(input_currency==cur_symbol):
-				found = 1
-				toCode=curr_code
-				break
-	elif (len(input_currency) == 3):
-		for curr_code in rates_source:
-			if(input_currency==curr_code):
-				found = 1
-				toCode = curr_code
-				break
-	else:
-		found = 1
-		if(input_currency == ''):
-			toCode=''
-		else:
-			toCode = 'ERROR-bad input format'
-
-	if(found==1):
-		return toCode
-	else:
-		return 'ERROR-unknown currency symbol/code'
-
-def getRates(api):
-	requestStatus=getResponse(api)
-	if(str(requestStatus) == '<Response [200]>'):
-		request = requestStatus.json()
-		rates = request["rates"]
-		rates["EUR"] = float(1)
-		request["rates"]=rates
-		with open('data.json', 'w') as outfile:
-				json.dump(request, outfile)
-	else:
-		with open('data.json', 'r') as f:
-			curencies_file = json.load(f)
-		rates = curencies_file["rates"]
-
-	return rates
-
-def converter(amount,input_currency,base,output_currency=None):
-	result = ((output_currency / base) / input_currency) * amount
-	return round(float(result),2)
 
 def main(argv):
 	input_amount=""
