@@ -12,14 +12,11 @@ def main(argv):
 	try:
 		opts, args = getopt.getopt(argv,"ha:i:o:",["amount=","input_currency=","output_currency="])
 	except getopt.GetoptError:
-		print ('Usage of script:')
-		print ('currconv.py -a <amount> -i <input currency> -o <output currency>')
-		print ('currconv.py --amount <amount> --input_currency <input currency> --output_currency <output currency>')
+		print ('Usage of script:\ncurrconv.py -a <amount> -i <input currency> -o <output currency>\ncurrconv.py --amount <amount> --input_currency <input currency> --output_currency <output currency>')
 		sys.exit(2)
 	for opt, arg in opts:
 		if opt == '-h':
-			print ('currconv.py -a <amount> -i <input currency> -o <output currency>')
-			print ('currconv.py --amount <amount> --input_currency <input currency> --output_currency <output currency>')
+			print ('currconv.py -a <amount> -i <input currency> -o <output currency>\ncurrconv.py --amount <amount> --input_currency <input currency> --output_currency <output currency>')
 			sys.exit()
 		elif opt in ("-a", "--amount"):
 			input_amount = float(arg)		
