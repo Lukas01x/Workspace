@@ -1,16 +1,16 @@
 # Kiwi task
 
 ## Files: 
-### convert_functions.py
+#### convert_functions.py
 contains functions used in both currency converters (api,cli)
 
-### data.json
+#### data.json
 source file containing currency rates
 
-### cli_converter.py
+#### cli_converter.py
 command line application for converting currencies
 
-### api_converter.py
+#### api_converter.py
 api application for converting currencies
 
 
