@@ -11,6 +11,7 @@ source file containing currency rates
 command line application for converting currencies
 
 Usage:
+
 `./currency_converter.py --amount <float> --input_currency <3 letter country code> --output_currency <3 letter country code>`
 
 
@@ -18,7 +19,10 @@ Usage:
 
 #### api_converter.py
 Api application for converting currencies
-Runs on `<IP address>:5000/currency_converter?amount=<float>&input_currency=<3 letter country code>&output_currency=<3 letter country code>`
+
+Runs on:
+
+`<IP address>:5000/currency_converter?amount=<float>&input_currency=<3 letter country code>&output_currency=<3 letter country code>`
 
 
 ## Python version:
