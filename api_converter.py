@@ -10,7 +10,7 @@ app.config["DEBUG"] = True
 #Mapping/routing URL to function api_id
 @app.route('/currency_converter', methods=['GET'])
 def api_id():
-	#Initialise agrument variables
+	#Initialise argument variables
 	currency_parameters = request.args
 	
 	#Check if given amount argument is float

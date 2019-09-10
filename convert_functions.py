@@ -41,7 +41,7 @@ def getRates(api):
 #Returns empty string, 3 letters country code or error
 def inputvalidation(input_currency,rates_source):
 	input_currency=str(input_currency)
-	#If its 1 letter input, check if its symbol of available currency, then convert it to 3 ltters country code
+	#If its 1 letter input, check if it is symbol of available currency, then convert it to 3 letters country code
 	if (len(input_currency) == 1):
 		for curr_code in rates_source:
 			cur_symbol=get_currency_symbol(curr_code,locale='en_US.utf8')
