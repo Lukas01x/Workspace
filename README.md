@@ -9,13 +9,15 @@ source file containing currency rates
 
 #### currency_converter.py
 command line application for converting currencies
-./currency_converter.py --amount <float> --input_currency <3 letter country code> --output_currency <3 letter country code>
-    or
-./currency_converter.py -a <float> -i <3 letter country code> -o <3 letter country code>
+Usage:
+`./currency_converter.py --amount <float> --input_currency <3 letter country code> --output_currency <3 letter country code>`
+
+
+`./currency_converter.py -a <float> -i <3 letter country code> -o <3 letter country code>`
 
 #### api_converter.py
-api application for converting currencies
-runs on <IP address>:5000/currency_converter?amount=<float>&input_currency=<3 letter country code>&output_currency=<3 letter country code>
+Api application for converting currencies
+Runs on `<IP address>:5000/currency_converter?amount=<float>&input_currency=<3 letter country code>&output_currency=<3 letter country code>`
 
 
 ## Python version:
