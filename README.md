@@ -9,6 +9,7 @@ source file containing currency rates
 
 #### currency_converter.py
 command line application for converting currencies
+
 Usage:
 `./currency_converter.py --amount <float> --input_currency <3 letter country code> --output_currency <3 letter country code>`
 
