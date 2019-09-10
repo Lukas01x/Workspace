@@ -7,11 +7,14 @@ contains functions used in both currency converters (api,cli)
 #### data.json
 source file containing currency rates
 
-#### cli_converter.py
+#### currency_converter.py
 command line application for converting currencies
+./currency_converter.py --amount <float> --input_currency <3 letter country code> --output_currency <3 letter country code> or
+./currency_converter.py -a <float> -i <3 letter country code> -o <3 letter country code>
 
 #### api_converter.py
 api application for converting currencies
+runs on <IP address>:5000/currency_converter?amount=<float>&input_currency=<3 letter country code>&output_currency=<3 letter country code>
 
 
 ## Python version:
